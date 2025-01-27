@@ -1,6 +1,7 @@
-import Jugador
-import Juego
+from Jugador import Jugador
+from Juego import Juego
 
-juego = Juego.Juego()
-juego.menuInicio()
-juego.menuDificultad()
+juego = Juego()
+juego.secuenciaInicio()
+paula = Jugador("Paula",10000)
+print(paula)
