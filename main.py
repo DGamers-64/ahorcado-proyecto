@@ -2,4 +2,5 @@ import Jugador
 import Juego
 
 juego = Juego.Juego()
-juego.inicializar()
+juego.menuInicio()
+juego.menuDificultad()
