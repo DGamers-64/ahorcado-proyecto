@@ -1,0 +1,29 @@
+[
+    {
+        "palabra": "Gato",
+        "pistas": [
+            "Animales",
+            "Felinos"
+        ],
+        "dificultad": "Fácil"
+    },
+    {
+        "palabra": "Notre Dame",
+        "pistas": [
+            "Catedral",
+            "Gótica",
+            "Francia"
+        ],
+        "dificultad": "Media"
+    },
+    {
+        "palabra": "12 hombres sin piedad",
+        "pistas": [
+            "1957",
+            "Blanco y negro",
+            "Crimen"
+        ],
+        "dificultad": "Dificil"
+    }
+]
+

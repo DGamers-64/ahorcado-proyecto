@@ -12,3 +12,5 @@ class Jugador:
         return f"Usuario: {self.nombre} \n Puntuacion: {self.puntuacion} \n Records: {self.records}"
     
     
+    
+    
