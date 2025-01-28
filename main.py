@@ -3,7 +3,7 @@ from Juego import Juego
 from Consola import Consola as Interfaz
 
 juego = Juego()
-juego.jugadores, juego.dificultad, juego.pistas = Interfaz.print_menu_inicial(juego)
+juego.jugadores, juego.dificultad, juego.pistas = Interfaz.print_menu_inicial()
 
 # PREGUNTAR NOMBRE A JUGADOR Y SI YA EXISTE EN LA BASE DE DATOS USAR SU USUARIO, SI NO CREAR UNO NUEVO
 # jugador1 = juego.nuevoJugador

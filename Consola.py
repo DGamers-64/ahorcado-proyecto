@@ -47,7 +47,7 @@ class Consola:
                 print("_", end=" ")
                 
     def preguntar_letra(lista: list[str]) -> list[str]:
-        print("\n\n >", end="")
+        print("\n\n > ", end="")
         letra = str(input()).upper()
         lista.append(letra)
         return lista
