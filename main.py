@@ -2,8 +2,10 @@ from Jugador import Jugador
 from Juego import Juego
 from Consola import Consola as Interfaz
 
+interfaz = Interfaz()
+
 juego = Juego()
-juego.jugadores, juego.dificultad, juego.pistas = Interfaz.print_menu_inicial()
+juego.jugadores, juego.dificultad, juego.pistas = interfaz.print_menu_inicial()
 
 # PREGUNTAR NOMBRE A JUGADOR Y SI YA EXISTE EN LA BASE DE DATOS USAR SU USUARIO, SI NO CREAR UNO NUEVO
 # jugador1 = juego.nuevoJugador
@@ -16,6 +18,9 @@ juego.jugadores, juego.dificultad, juego.pistas = Interfaz.print_menu_inicial()
 
 juego.crear_palabra()
 
-while True:
-    Interfaz.print_palabra(juego)
-    juego.letras_introducidas = Interfaz.preguntar_letra(juego.letras_introducidas)
+errores = []
+
+while len(errores) < 7 or not juego.comprobar_ganador():
+    interfaz.print_palabra(juego)
+    interfaz.preguntar_letra(juego)
+    errores = juego.comprobar_errores()

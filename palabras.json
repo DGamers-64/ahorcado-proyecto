@@ -8,6 +8,51 @@
         "dificultad": "Fácil"
     },
     {
+        "palabra": "Maradona",
+        "pistas": [
+            "Argentina",
+            "Fútbol",
+            "Mano de Dios"
+        ],
+        "dificultad": "Fácil"
+    },
+    {
+        "palabra": "Rock and Roll",
+        "pistas": [
+            "Guitarra",
+            "Elvis Presley",
+            "Ritmo"
+        ],
+        "dificultad": "Fácil"
+    },
+    {
+        "palabra": "Fotosíntesis",
+        "pistas": [
+            "Plantas",
+            "Sol",
+            "Energía"
+        ],
+        "dificultad": "Media"
+    },
+    {
+        "palabra": "Cleopatra",
+        "pistas": [
+            "Egipto",
+            "Reina",
+            "Julio César"
+        ],
+        "dificultad": "Media"
+    },
+    {
+        "palabra": "Breaking Bad",
+        "pistas": [
+            "Química",
+            "Walter White",
+            "Serie"
+        ],
+        "dificultad": "Media"
+    },
+    {
         "palabra": "Notre Dame",
         "pistas": [
             "Catedral",
@@ -15,6 +60,51 @@
             "Francia"
         ],
         "dificultad": "Media"
+    },
+    {
+        "palabra": "Tour de Francia",
+        "pistas": [
+            "Ciclismo",
+            "Montañas",
+            "Competencia"
+        ],
+        "dificultad": "Media"
+    },
+    {
+        "palabra": "Isaac Newton",
+        "pistas": [
+            "Física",
+            "Manzana",
+            "Gravedad"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Revolución Francesa",
+        "pistas": [
+            "1789",
+            "Libertad",
+            "Guillotina"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "El Padrino",
+        "pistas": [
+            "Mafia",
+            "1972",
+            "Marlon Brando"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Beethoven",
+        "pistas": [
+            "Sordo",
+            "Sinfonías",
+            "Clásica"
+        ],
+        "dificultad": "Difícil"
     },
     {
         "palabra": "12 hombres sin piedad",

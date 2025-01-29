@@ -5,7 +5,7 @@ class Juego:
     jugadores: int
     dificultad: int
     pistas: int
-    palabra:str
+    palabra:dict
     letras_introducidas:list
     
     def __init__(self):
@@ -17,3 +17,12 @@ class Juego:
         indice_palabra = random.randint(0,len(palabras))
         self.palabra = palabras[indice_palabra -1]
     
+    def comprobar_errores(self):
+        errores = []
+        for i in self.letras_introducidas:
+            if i not in self.palabra["palabra"].upper():
+                errores.append(i)
+        return errores
+    
+    def comprobar_ganador(self):
+        pass
