@@ -53,10 +53,13 @@ class Consola:
     def preguntar_letra(self, juego):
         print("\n\n > ", end="")
         letra = str(input()).upper()
-        if letra not in juego.letras_introducidas:
+        if letra == juego.palabra["palabra"].upper():
+            for caracter in letra:
+                juego.letras_introducidas.append(caracter)
+        elif letra not in juego.letras_introducidas:
             juego.letras_introducidas.append(letra)
 
-    def dibujar_ahorcado(self, intentos: int):
+    def dibujar_ahorcado(self, errores):
         estados = [
             "\n  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n      |\n      |\n      |\n=========",
@@ -65,5 +68,5 @@ class Consola:
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n /    |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n========="]
-        
-        print(estados[min(intentos, len(estados) - 1)])
+        if len(errores) > 0:
+            print(estados[len(errores)-1])

@@ -19,8 +19,17 @@ juego.jugadores, juego.dificultad, juego.pistas = interfaz.print_menu_inicial()
 juego.crear_palabra()
 
 errores = []
+ganador = False
 
-while len(errores) < 7 or not juego.comprobar_ganador():
+while len(errores) < 7 and not ganador:
     interfaz.print_palabra(juego)
+    interfaz.dibujar_ahorcado(errores)
     interfaz.preguntar_letra(juego)
     errores = juego.comprobar_errores()
+    ganador = juego.comprobar_ganador()
+interfaz.print_palabra(juego)
+if ganador:
+    print("\n\nHAS GANADO")
+else:
+    print("\n\nHAS PERDIDO")
+interfaz.dibujar_ahorcado(errores)

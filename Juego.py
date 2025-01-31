@@ -25,4 +25,11 @@ class Juego:
         return errores
     
     def comprobar_ganador(self):
-        pass
+        letras_unicas= []
+        for letra in self.palabra["palabra"].upper():
+            if letra not in letras_unicas and letra != " ":
+                letras_unicas.append(letra)
+        for letra in letras_unicas:
+            if letra not in self.letras_introducidas:
+                return False
+        return True
