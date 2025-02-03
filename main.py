@@ -8,7 +8,8 @@ juego = Juego()
 juego.jugadores, juego.dificultad, juego.pistas = interfaz.print_menu_inicial()
 
 # PREGUNTAR NOMBRE A JUGADOR Y SI YA EXISTE EN LA BASE DE DATOS USAR SU USUARIO, SI NO CREAR UNO NUEVO
-# jugador1 = juego.nuevoJugador
+nombre = input("Nombre Jugador >")
+jugador1 = Jugador(nombre)
 # if jugador1 == existe
 #   jugador1 = Jugador(ya existente)
 # else
