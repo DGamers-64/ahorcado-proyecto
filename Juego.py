@@ -8,7 +8,7 @@ class Juego:
     palabra:dict
     letras_introducidas:list
     
-    def __init__(self):
+    def __init__(self) -> None:
         self.letras_introducidas = []
     
     def crear_palabra(self) -> None:
@@ -20,15 +20,20 @@ class Juego:
             self.palabra = palabras[indice_palabra]
             if (self.palabra["dificultad"] == "Fácil" and self.dificultad == 1) or (self.palabra["dificultad"] == "Media" and self.dificultad == 2) or (self.palabra["dificultad"] == "Difícil" and self.dificultad == 3):
                 palabra_obtenida = True
+
+    def insertar_palabra(self, interfaz):
+        palabra = interfaz.preguntar_palabra()
+        pistas = interfaz.preguntar_pistas()
+        self.palabra = { "palabra": palabra, "pistas": pistas }
     
-    def comprobar_errores(self):
+    def comprobar_errores(self) -> list[str]:
         errores = []
         for i in self.letras_introducidas:
             if i not in self.palabra["palabra"].upper():
                 errores.append(i)
         return errores
     
-    def comprobar_ganador(self):
+    def comprobar_ganador(self) -> bool:
         letras_unicas= []
         for letra in self.palabra["palabra"].upper():
             if letra not in letras_unicas and letra != " ":

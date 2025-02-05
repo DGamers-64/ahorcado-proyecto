@@ -1,42 +1,57 @@
-import os
+import os, getpass
+from Juego import Juego
 class Consola:
     
-    def print_linea(self, ):
-        print("-------------------------------------")
+    def print_linea(self) -> None:
+        print("--------------------------------------------")
     
-    def limpiar_consola(self, ):
+    def limpiar_consola(self) -> None:
         os.system("cls")
-        
-    def print_menu_inicial(self, ) -> tuple[int, int, int]:
+
+    def print_menu_bienvenida(self) -> None:
         self.limpiar_consola()
         self.print_linea()
-        print(" Bienvenido al ahorcado")
+        print("| Bienvenido al ahorcado de Paula y Daniel |")
         self.print_linea()
-        print(" Modos:")
+        input()
+        self.limpiar_consola()
+
+    def print_menu_jugadores(self) -> int:
+        print(" Jugadores:")
         print("  1. Un jugador")
         print("  2. Dos jugadores")
         print("  > ", end="")
         jugadores = int(input())
         self.limpiar_consola()
-        print(f" Jugadores: {jugadores}")
-        print(" Modos:")
+        return jugadores
+
+    def print_menu_dificultad(self) -> int:
+        print(" Dificultad:")
         print("  1. Fácil")
         print("  2. Medio")
         print("  3. Dificil")
         print("  > ", end="")
         dificultad = int(input())
         self.limpiar_consola()
-        print(f"Jugadores: {jugadores}")
-        print(f"Dificultad: {dificultad}")
-        print(" Modos:")
+        return dificultad
+    
+    def print_menu_pistas(self) -> int:
+        print(" Pistas:")
         print("  1. Con pistas")
         print("  2. Sin pistas")
         print("  > ", end="")
         pistas = int(input())
         self.limpiar_consola()
+        return pistas
+
+    def print_menu_inicial(self) -> tuple[int, int, int]:
+        self.print_menu_bienvenida()
+        jugadores = self.print_menu_jugadores()
+        dificultad = self.print_menu_dificultad()
+        pistas = self.print_menu_pistas()
         return jugadores, dificultad, pistas
         
-    def print_palabra(self, juego):
+    def print_palabra(self, juego: Juego) -> None:
         self.limpiar_consola()
         print(" ", end="")
         for caracter in juego.palabra["palabra"].upper():
@@ -51,7 +66,7 @@ class Consola:
             if i not in juego.palabra["palabra"].upper():
                 print(i, end=" ")
                 
-    def preguntar_letra(self, juego):
+    def preguntar_letra(self, juego: Juego) -> None:
         print("\n\n > ", end="")
         letra = str(input()).upper()
         if letra == juego.palabra["palabra"].upper():
@@ -60,8 +75,9 @@ class Consola:
         elif letra not in juego.letras_introducidas:
             juego.letras_introducidas.append(letra)
 
-    def dibujar_ahorcado(self, errores):
+    def dibujar_ahorcado(self, errores: list[str]) -> None:
         estados = [
+            "\n  +---+\n      |\n      |\n      |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n      |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n  |   |\n      |\n      |\n=========", 
@@ -69,5 +85,23 @@ class Consola:
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n /    |\n      |\n=========",
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n========="]
-        if len(errores) > 0:
-            print(estados[len(errores)-1])
+        print(estados[len(errores)])
+
+    def print_ganador(self, jugador):
+        print("\nHAS GANADO")
+        print(f"\n{jugador.nombre} ahora tienes {jugador.puntuacion} puntos")
+    
+    def print_perdedor(self, jugador, juego):
+        print("\nHAS PERDIDO")
+        print(juego.palabra["palabra"].upper(), sep= "")
+        print(f"\n{jugador.nombre} ahora tienes {jugador.puntuacion} puntos")
+
+    def preguntar_nombre(self):
+        return input("Nombre Jugador > ")
+    
+    def preguntar_palabra(self):
+        self.limpiar_consola()
+        return getpass.getpass(" Dime una palabra (se ve oculta) > ")
+    
+    def preguntar_pistas(self):
+        return [getpass.getpass(" Dime una pista (se ve oculta) > ") for i in range(3)]
