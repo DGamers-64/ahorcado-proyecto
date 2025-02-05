@@ -21,21 +21,24 @@ ganador = False
 
 while len(errores) < 7 and not ganador:
     interfaz.print_palabra(juego)
-    if len(errores) >= 3 and juego.pistas == 1:
-        print("\n",juego.palabra["pistas"][0], sep="")
-    if len(errores) >= 5 and juego.pistas == 1:
-        print("\n",juego.palabra["pistas"][1], sep="")
-    if len(errores) >= 6 and juego.pistas == 1:
-        print("\n",juego.palabra["pistas"][2], sep="")    
-    interfaz.dibujar_ahorcado(errores)
+    interfaz.print_pistas(errores, juego)
+    interfaz.print_ahorcado(errores)
     interfaz.preguntar_letra(juego)
     errores = juego.comprobar_errores()
     ganador = juego.comprobar_ganador()
 interfaz.print_palabra(juego)
-interfaz.dibujar_ahorcado(errores)
+interfaz.print_ahorcado(errores)
 if ganador:
     jugador1.sumar_punto()
-    interfaz.print_ganador(jugador1)
+    interfaz.print_ganador()
+    interfaz.print_jugador(jugador1)
+    if juego.jugadores == 2:
+        jugador2.restar_punto()
+        interfaz.print_jugador(jugador2)
 else:
     jugador1.restar_punto()
-    interfaz.print_perdedor(jugador1, juego)
+    interfaz.print_perdedor(juego)
+    interfaz.print_jugador(jugador1)
+    if juego.jugadores == 2:
+        jugador2.sumar_punto()
+        interfaz.print_jugador(jugador2)

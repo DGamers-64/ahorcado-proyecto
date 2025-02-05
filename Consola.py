@@ -1,5 +1,7 @@
 import os, getpass
 from Juego import Juego
+from Jugador import Jugador
+
 class Consola:
     
     def print_linea(self) -> None:
@@ -47,14 +49,18 @@ class Consola:
     def print_menu_inicial(self) -> tuple[int, int, int]:
         self.print_menu_bienvenida()
         jugadores = self.print_menu_jugadores()
-        dificultad = self.print_menu_dificultad()
-        pistas = self.print_menu_pistas()
+        if jugadores == 1:
+            dificultad = self.print_menu_dificultad()
+            pistas = self.print_menu_pistas()
+        else:
+            dificultad = 1
+            pistas = 1
         return jugadores, dificultad, pistas
         
     def print_palabra(self, juego: Juego) -> None:
         self.limpiar_consola()
-        print(" ", end="")
-        for caracter in juego.palabra["palabra"].upper():
+        palabra = juego.palabra["palabra"].upper()
+        for caracter in palabra:
             if caracter in juego.letras_introducidas:
                 print (f"{caracter}", end=" ")
             elif caracter == " ":
@@ -63,7 +69,9 @@ class Consola:
                 print("_", end=" ")
         print()
         for i in juego.letras_introducidas:
-            if i not in juego.palabra["palabra"].upper():
+            if i not in palabra:
+                print(i, end=" ")
+            elif len(i) > 1 and i != palabra:
                 print(i, end=" ")
                 
     def preguntar_letra(self, juego: Juego) -> None:
@@ -75,7 +83,7 @@ class Consola:
         elif letra not in juego.letras_introducidas:
             juego.letras_introducidas.append(letra)
 
-    def dibujar_ahorcado(self, errores: list[str]) -> None:
+    def print_ahorcado(self, errores: list[str]) -> None:
         estados = [
             "\n  +---+\n      |\n      |\n      |\n      |\n      |\n=========",
             "\n  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
@@ -87,21 +95,31 @@ class Consola:
             "\n  +---+\n  |   |\n  O   |\n /|\\  |\n / \\  |\n      |\n========="]
         print(estados[len(errores)])
 
-    def print_ganador(self, jugador):
+    def print_ganador(self) -> None:
         print("\nHAS GANADO")
-        print(f"\n{jugador.nombre} ahora tienes {jugador.puntuacion} puntos")
     
-    def print_perdedor(self, jugador, juego):
+    def print_perdedor(self, juego: Juego) -> None:
         print("\nHAS PERDIDO")
         print(juego.palabra["palabra"].upper(), sep= "")
-        print(f"\n{jugador.nombre} ahora tienes {jugador.puntuacion} puntos")
 
-    def preguntar_nombre(self):
+    def preguntar_nombre(self) -> str:
         return input("Nombre Jugador > ")
     
-    def preguntar_palabra(self):
+    def preguntar_palabra(self) -> str:
         self.limpiar_consola()
-        return getpass.getpass(" Dime una palabra (se ve oculta) > ")
+        return getpass.getpass("Dime una palabra (se ve oculta) > ")
     
-    def preguntar_pistas(self):
-        return [getpass.getpass(" Dime una pista (se ve oculta) > ") for i in range(3)]
+    def preguntar_pistas(self) -> str:
+        return [getpass.getpass("Dime una pista (se ve oculta) > ") for i in range(3)]
+    
+    def print_pistas(self, errores: list[str], juego: Juego) -> None:
+        if len(errores) >= 3 and juego.pistas == 1:
+            print("\n",juego.palabra["pistas"][0], sep="")
+        if len(errores) >= 5 and juego.pistas == 1:
+            print("\n",juego.palabra["pistas"][1], sep="")
+        if len(errores) >= 6 and juego.pistas == 1:
+            print("\n",juego.palabra["pistas"][2], sep="")
+
+    def print_jugador(self, jugador: Jugador) -> None:
+        self.print_linea()
+        print(jugador)

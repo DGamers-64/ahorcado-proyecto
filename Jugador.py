@@ -13,7 +13,7 @@ class Jugador:
         self.puntuacion = jugadores[nombre]
 
     def __str__(self) -> str:
-        return f"Usuario: {self.nombre} \n Puntuacion: {self.puntuacion}"
+        return f"Usuario: {self.nombre} \nPuntuacion: {self.puntuacion}"
 
     def sumar_punto(self) -> None:
         self.puntuacion += 1
