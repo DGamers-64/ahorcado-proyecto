@@ -1,120 +1,1981 @@
 [
     {
-        "palabra": "Gato",
+        "palabra": "Perro",
         "pistas": [
-            "Animales",
-            "Felinos",
-            "Miau"
+            "Animal",
+            "Mascota",
+            "Ladra"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Sol",
+        "pistas": [
+            "Estrella",
+            "Luz",
+            "Cielo"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Pelota",
+        "pistas": [
+            "Deporte",
+            "Jugar",
+            "Redonda"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Manzana",
+        "pistas": [
+            "Fruta",
+            "Roja",
+            "Comer"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Playa",
+        "pistas": [
+            "Mar",
+            "Arena",
+            "Vacaciones"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Libro",
+        "pistas": [
+            "Lectura",
+            "Hojas",
+            "Cultura"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Coche",
+        "pistas": [
+            "Vehículo",
+            "Conducir",
+            "Ruedas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Casa",
+        "pistas": [
+            "Hogar",
+            "Techo",
+            "Vivienda"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Zapato",
+        "pistas": [
+            "Calzado",
+            "Pie",
+            "Caminar"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Arbol",
+        "pistas": [
+            "Planta",
+            "Rama",
+            "Hojas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Reloj",
+        "pistas": [
+            "Tiempo",
+            "Manecillas",
+            "Horas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Silla",
+        "pistas": [
+            "Mueble",
+            "Sentarse",
+            "Patas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Agua",
+        "pistas": [
+            "Líquido",
+            "H2O",
+            "Beber"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Comida",
+        "pistas": [
+            "Comer",
+            "Alimento",
+            "Plato"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Fruta",
+        "pistas": [
+            "Comida",
+            "Natural",
+            "Verdura"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Luna",
+        "pistas": [
+            "Cielo",
+            "Noche",
+            "Satélite"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Jirafa",
+        "pistas": [
+            "Animal",
+            "Cuello largo",
+            "Sabana"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Ropa",
+        "pistas": [
+            "Vestir",
+            "Tejido",
+            "Cuerpo"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Sombrero",
+        "pistas": [
+            "Cabeza",
+            "Accesorio",
+            "Techo"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Bicicleta",
+        "pistas": [
+            "Vehículo",
+            "Pedales",
+            "Ruedas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Montaña",
+        "pistas": [
+            "Cima",
+            "Roca",
+            "Subir"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Tigre",
+        "pistas": [
+            "Felino",
+            "Rayas",
+            "Caza"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Avión",
+        "pistas": [
+            "Aéreo",
+            "Vuelo",
+            "Pasajeros"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Bola",
+        "pistas": [
+            "Redonda",
+            "Jugar",
+            "Deporte"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Sol",
+        "pistas": [
+            "Luz",
+            "Estrella",
+            "Día"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Cielo",
+        "pistas": [
+            "Azul",
+            "Nubes",
+            "Aire"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Mujer",
+        "pistas": [
+            "Persona",
+            "Femenino",
+            "Madre"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Hombre",
+        "pistas": [
+            "Persona",
+            "Masculino",
+            "Padre"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Escuela",
+        "pistas": [
+            "Educación",
+            "Maestro",
+            "Alumnos"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Trabajo",
+        "pistas": [
+            "Empleo",
+            "Oficina",
+            "Dinero"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Refrigerador",
+        "pistas": [
+            "Electrodoméstico",
+            "Comida",
+            "Frío"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Lluvia",
+        "pistas": [
+            "Agua",
+            "Cae del cielo",
+            "Nubes"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Cuchillo",
+        "pistas": [
+            "Cortar",
+            "Cuchara",
+            "Cocina"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Película",
+        "pistas": [
+            "Cine",
+            "Pantalla",
+            "Historia"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Futbol",
+        "pistas": [
+            "Deporte",
+            "Balón",
+            "Equipo"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Guitarra",
+        "pistas": [
+            "Instrumento",
+            "Cuerda",
+            "Música"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Pluma",
+        "pistas": [
+            "Escribir",
+            "Pico",
+            "Ave"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Madera",
+        "pistas": [
+            "Árbol",
+            "Material",
+            "Construcción"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Piedra",
+        "pistas": [
+            "Roca",
+            "Dura",
+            "Natural"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Gafas",
+        "pistas": [
+            "Ojos",
+            "Vista",
+            "Accesorio"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Rana",
+        "pistas": [
+            "Animal",
+            "Anfibio",
+            "Salta"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Cebra",
+        "pistas": [
+            "Animal",
+            "Rayas",
+            "Negra y blanca"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Cerveza",
+        "pistas": [
+            "Bebida",
+            "Alcohol",
+            "Hombre"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Hombre",
+        "pistas": [
+            "Masculino",
+            "Persona",
+            "Trabajo"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Coche",
+        "pistas": [
+            "Vehículo",
+            "Conducir",
+            "Motor"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Silla",
+        "pistas": [
+            "Sentarse",
+            "Mueble",
+            "Patas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Naranja",
+        "pistas": [
+            "Fruta",
+            "Cítrica",
+            "Anaranjada"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Fresa",
+        "pistas": [
+            "Fruta",
+            "Roja",
+            "Dulce"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Agua",
+        "pistas": [
+            "H2O",
+            "Beber",
+            "Líquido"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Cielo",
+        "pistas": [
+            "Nubes",
+            "Azul",
+            "Aire"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Papel",
+        "pistas": [
+            "Escribir",
+            "Blanco",
+            "Hojas"
+        ],
+        "dificultad": "Fácil"
+    },
+    
+    {
+        "palabra": "Agonía",
+        "pistas": [
+            "Dolor",
+            "Sufrimiento",
+            "Larga"
         ],
         "dificultad": "Fácil"
     },
     {
-        "palabra": "Maradona",
+        "palabra": "Ecuador",
         "pistas": [
-            "Argentina",
-            "Fútbol",
-            "Mano de Dios"
+            "País",
+            "América del Sur",
+            "Capital Quito"
         ],
-        "dificultad": "Fácil"
+        "dificultad": "Media"
     },
+    
     {
-        "palabra": "Rock and Roll",
+        "palabra": "Cebra",
         "pistas": [
-            "Guitarra",
-            "Elvis Presley",
-            "Ritmo"
+            "Animal",
+            "Rayas",
+            "Negra y blanca"
         ],
-        "dificultad": "Fácil"
+        "dificultad": "Media"
     },
+    
     {
-        "palabra": "Fotosíntesis",
+        "palabra": "Silla",
         "pistas": [
-            "Plantas",
-            "Sol",
-            "Energía"
+            "Mueble",
+            "Sentarse",
+            "Patas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Café",
+        "pistas": [
+            "Bebida",
+            "Taza",
+            "Negro"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cuadro",
+        "pistas": [
+            "Arte",
+            "Pintura",
+            "Marco"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Martillo",
+        "pistas": [
+            "Herramienta",
+            "Clavos",
+            "Golpear"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Lámpara",
+        "pistas": [
+            "Luz",
+            "Bombilla",
+            "Iluminar"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Montaña",
+        "pistas": [
+            "Roca",
+            "Cima",
+            "Alta"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Ciudad",
+        "pistas": [
+            "Edificios",
+            "Población",
+            "Tráfico"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Estrella",
+        "pistas": [
+            "Cielo",
+            "Brillante",
+            "Noche"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Luna",
+        "pistas": [
+            "Cielo",
+            "Satélite",
+            "Brillante"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Teatro",
+        "pistas": [
+            "Obra",
+            "Escenario",
+            "Actores"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Tornado",
+        "pistas": [
+            "Tormenta",
+            "Viento",
+            "Destrucción"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Playa",
+        "pistas": [
+            "Mar",
+            "Arena",
+            "Vacaciones"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Futbol",
+        "pistas": [
+            "Deporte",
+            "Balón",
+            "Gol"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Aire",
+        "pistas": [
+            "Viento",
+            "Respirar",
+            "Oxígeno"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Bicicleta",
+        "pistas": [
+            "Ruedas",
+            "Pedales",
+            "Deporte"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Rey",
+        "pistas": [
+            "Monarquía",
+            "Corona",
+            "Reino"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Comida",
+        "pistas": [
+            "Alimento",
+            "Comer",
+            "Plato"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Bajo",
+        "pistas": [
+            "Instrumento",
+            "Música",
+            "Cuerda"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Nube",
+        "pistas": [
+            "Cielo",
+            "Lluvia",
+            "Agua"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Fresa",
+        "pistas": [
+            "Fruta",
+            "Roja",
+            "Dulce"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Silla",
+        "pistas": [
+            "Mueble",
+            "Sentarse",
+            "Patas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Escuela",
+        "pistas": [
+            "Educación",
+            "Niños",
+            "Maestro"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Pizarra",
+        "pistas": [
+            "Escuela",
+            "Tiza",
+            "Profesor"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Tienda",
+        "pistas": [
+            "Comercio",
+            "Comprar",
+            "Ropa"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Lentes",
+        "pistas": [
+            "Visión",
+            "Ojos",
+            "Accesorio"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cactus",
+        "pistas": [
+            "Planta",
+            "Pinchos",
+            "Desierto"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Espejo",
+        "pistas": [
+            "Reflejo",
+            "Vidrio",
+            "Imagen"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Diente",
+        "pistas": [
+            "Boca",
+            "Masticar",
+            "Blanco"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Huevo",
+        "pistas": [
+            "Animal",
+            "Comida",
+            "Cáscara"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Frío",
+        "pistas": [
+            "Temperatura",
+            "Bajo",
+            "Invierno"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Sol",
+        "pistas": [
+            "Estrella",
+            "Cielo",
+            "Luz"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Reloj",
+        "pistas": [
+            "Tiempo",
+            "Horas",
+            "Manecillas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Dibujo",
+        "pistas": [
+            "Arte",
+            "Papel",
+            "Lápiz"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cámara",
+        "pistas": [
+            "Fotografía",
+            "Lente",
+            "Imagen"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Foca",
+        "pistas": [
+            "Animal",
+            "Mar",
+            "Saltadora"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Papel",
+        "pistas": [
+            "Escribir",
+            "Hojas",
+            "Libro"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Mueble",
+        "pistas": [
+            "Casa",
+            "Cama",
+            "Silla"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Piedra",
+        "pistas": [
+            "Roca",
+            "Dura",
+            "Natural"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cuchara",
+        "pistas": [
+            "Cocina",
+            "Comida",
+            "Plato"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Agua",
+        "pistas": [
+            "Líquido",
+            "Beber",
+            "H2O"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Futbol",
+        "pistas": [
+            "Balón",
+            "Gol",
+            "Deporte"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Zapato",
+        "pistas": [
+            "Calzado",
+            "Pies",
+            "Caminando"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cámara",
+        "pistas": [
+            "Foto",
+            "Objetivo",
+            "Imagen"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Delfín",
+        "pistas": [
+            "Mar",
+            "Animal",
+            "Inteligente"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cebra",
+        "pistas": [
+            "Animal",
+            "Rayas",
+            "Negra y blanca"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Tren",
+        "pistas": [
+            "Transporte",
+            "Vía",
+            "Vagón"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Madera",
+        "pistas": [
+            "Árbol",
+            "Natural",
+            "Material"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Espejo",
+        "pistas": [
+            "Reflejo",
+            "Vidrio",
+            "Imagen"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Coche",
+        "pistas": [
+            "Automóvil",
+            "Conducir",
+            "Ruedas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Silla",
+        "pistas": [
+            "Mueble",
+            "Sentarse",
+            "Patas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Ventana",
+        "pistas": [
+            "Casa",
+            "Cristales",
+            "Aire"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cielo",
+        "pistas": [
+            "Azul",
+            "Aire",
+            "Nubes"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Boca",
+        "pistas": [
+            "Comer",
+            "Hablar",
+            "Labios"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Guitarra",
+        "pistas": [
+            "Instrumento",
+            "Cuerdas",
+            "Música"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Reloj",
+        "pistas": [
+            "Tiempo",
+            "Horas",
+            "Manecillas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Escuela",
+        "pistas": [
+            "Educación",
+            "Niños",
+            "Maestro"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Ciudad",
+        "pistas": [
+            "Edificios",
+            "Población",
+            "Tráfico"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Parque",
+        "pistas": [
+            "Naturaleza",
+            "Árboles",
+            "Bancos"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Comida",
+        "pistas": [
+            "Alimento",
+            "Comer",
+            "Plato"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Plaza",
+        "pistas": [
+            "Espacio",
+            "Público",
+            "Centro"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Mesa",
+        "pistas": [
+            "Mueble",
+            "Comer",
+            "Comedor"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Taza",
+        "pistas": [
+            "Vaso",
+            "Beber",
+            "Café"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Hielo",
+        "pistas": [
+            "Frío",
+            "Agua",
+            "Cubos"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Aceite",
+        "pistas": [
+            "Cocinar",
+            "Líquido",
+            "Comida"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Zapato",
+        "pistas": [
+            "Calzado",
+            "Pies",
+            "Caminando"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Piedra",
+        "pistas": [
+            "Roca",
+            "Dura",
+            "Natural"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cinturón",
+        "pistas": [
+            "Ropa",
+            "Cintura",
+            "Pantalón"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Papel",
+        "pistas": [
+            "Escribir",
+            "Blanco",
+            "Hojas"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Mujer",
+        "pistas": [
+            "Femenino",
+            "Persona",
+            "Madre"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Cafetera",
+        "pistas": [
+            "Café",
+            "Máquina",
+            "Taza"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Flor",
+        "pistas": [
+            "Planta",
+            "Colorida",
+            "Jardín"
+        ],
+        "dificultad": "Media"
+    },
+    
+    {
+        "palabra": "Estufa",
+        "pistas": [
+            "Calor",
+            "Cocinar",
+            "Cocina"
         ],
         "dificultad": "Media"
     },
     {
-        "palabra": "Cleopatra",
+        "palabra": "Tautología",
         "pistas": [
-            "Egipto",
-            "Reina",
-            "Julio César"
+            "Redundancia",
+            "Expresión",
+            "Lógica"
         ],
-        "dificultad": "Media"
+        "dificultad": "Difícil"
     },
     {
-        "palabra": "Breaking Bad",
+        "palabra": "Antiestablishment",
         "pistas": [
+            "Oposición",
+            "Sociedad",
+            "Movimientos"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Biocompatibilidad",
+        "pistas": [
+            "Biología",
+            "Sistemas",
+            "Compatibilidad"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Holografía",
+        "pistas": [
+            "Imagen",
+            "Luz",
+            "Tecnología"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Recursividad",
+        "pistas": [
+            "Proceso",
+            "Repetición",
+            "Matemáticas"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Apendicitis",
+        "pistas": [
+            "Inflamación",
+            "Apendice",
+            "Enfermedad"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Supernova",
+        "pistas": [
+            "Estrella",
+            "Explosión",
+            "Astronomía"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Mnemotécnico",
+        "pistas": [
+            "Memoria",
+            "Técnica",
+            "Recordar"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Irracionalidad",
+        "pistas": [
+            "Pensamiento",
+            "Lógica",
+            "Comportamiento"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Hematocrito",
+        "pistas": [
+            "Sangre",
+            "Células",
+            "Medición"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Antropocentrismo",
+        "pistas": [
+            "Humanos",
+            "Mundo",
+            "Visión"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Cromatografía",
+        "pistas": [
+            "Separación",
             "Química",
-            "Walter White",
-            "Serie"
-        ],
-        "dificultad": "Media"
-    },
-    {
-        "palabra": "Notre Dame",
-        "pistas": [
-            "Catedral",
-            "Gótica",
-            "Francia"
-        ],
-        "dificultad": "Media"
-    },
-    {
-        "palabra": "Tour de Francia",
-        "pistas": [
-            "Ciclismo",
-            "Montañas",
-            "Competencia"
-        ],
-        "dificultad": "Media"
-    },
-    {
-        "palabra": "Isaac Newton",
-        "pistas": [
-            "Física",
-            "Manzana",
-            "Gravedad"
+            "Sustancias"
         ],
         "dificultad": "Difícil"
     },
     {
-        "palabra": "Revolución Francesa",
+        "palabra": "Transmutación",
         "pistas": [
-            "1789",
-            "Libertad",
-            "Guillotina"
+            "Cambio",
+            "Elementos",
+            "Radioactividad"
         ],
         "dificultad": "Difícil"
     },
     {
-        "palabra": "El Padrino",
+        "palabra": "Psiconeuroinmunología",
         "pistas": [
-            "Mafia",
-            "1972",
-            "Marlon Brando"
+            "Mente",
+            "Cuerpo",
+            "Ciencia"
         ],
         "dificultad": "Difícil"
     },
     {
-        "palabra": "Beethoven",
+        "palabra": "Electromiografía",
         "pistas": [
-            "Sordo",
-            "Sinfonías",
-            "Clásica"
+            "Músculos",
+            "Electricidad",
+            "Medición"
         ],
         "dificultad": "Difícil"
     },
     {
-        "palabra": "12 hombres sin piedad",
+        "palabra": "Ciberseguridad",
         "pistas": [
-            "1957",
-            "Blanco y negro",
-            "Crimen"
+            "Protección",
+            "Internet",
+            "Datos"
         ],
         "dificultad": "Difícil"
-    }
+    },
+    {
+        "palabra": "Metafísica",
+        "pistas": [
+            "Filosofía",
+            "Realidad",
+            "Substancia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Espectroscopía",
+        "pistas": [
+            "Luz",
+            "Espectro",
+            "Análisis"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Esquizofrenia",
+        "pistas": [
+            "Trastorno",
+            "Mente",
+            "Psicología"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Cronobiología",
+        "pistas": [
+            "Ritmos",
+            "Cuerpo",
+            "Tiempo"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Fenomenología",
+        "pistas": [
+            "Experiencia",
+            "Percepción",
+            "Filosofía"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Neurotransmisores",
+        "pistas": [
+            "Cerebro",
+            "Señales",
+            "Sustancias"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Anticonstitucionalmente",
+        "pistas": [
+            "Política",
+            "Ley",
+            "Gobierno"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Neumonoultramicroscopicosilicovolcanoconiosis",
+        "pistas": [
+            "Enfermedad",
+            "Pulmón",
+            "Polvo"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Cataclismo",
+        "pistas": [
+            "Destrucción",
+            "Desastre",
+            "Natural"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Filantropía",
+        "pistas": [
+            "Ayuda",
+            "Generosidad",
+            "Sociedad"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Iatrogenia",
+        "pistas": [
+            "Enfermedad",
+            "Tratamiento",
+            "Médico"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Revolución Industrial",
+        "pistas": [
+            "Máquinas",
+            "Trabajo",
+            "Siglo XIX"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Zoología",
+        "pistas": [
+            "Estudio",
+            "Animales",
+            "Ciencia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Quimioterapia",
+        "pistas": [
+            "Tratamiento",
+            "Cáncer",
+            "Medicamentos"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Renacimiento",
+        "pistas": [
+            "Arte",
+            "Cultura",
+            "Renovación"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Paleontología",
+        "pistas": [
+            "Fósiles",
+            "Estudio",
+            "Prehistoria"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Electroencefalograma",
+        "pistas": [
+            "Cerebro",
+            "Actividad",
+            "Medición"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Protocolo",
+        "pistas": [
+            "Normas",
+            "Procedimiento",
+            "Oficial"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Estereoisómeros",
+        "pistas": [
+            "Moléculas",
+            "Química",
+            "Estructura"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Constitucionalismo",
+        "pistas": [
+            "Ley",
+            "Gobierno",
+            "Derechos"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Interdependencia",
+        "pistas": [
+            "Relaciones",
+            "Dependencia",
+            "Conexiones"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Biodiversidad",
+        "pistas": [
+            "Especies",
+            "Ecología",
+            "Naturaleza"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Anacoluto",
+        "pistas": [
+            "Gramática",
+            "Error",
+            "Frase"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Contrarrevolución",
+        "pistas": [
+            "Oposición",
+            "Revolución",
+            "Política"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Cacofonía",
+        "pistas": [
+            "Sonido",
+            "Desagradable",
+            "Ruido"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Mnemotecnia",
+        "pistas": [
+            "Memoria",
+            "Técnica",
+            "Recuerdo"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Quimera",
+        "pistas": [
+            "Fantasía",
+            "Sueño",
+            "Imposible"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Antropocentrismo",
+        "pistas": [
+            "Humanos",
+            "Mundo",
+            "Visión"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Perpendicular",
+        "pistas": [
+            "Ángulo",
+            "Recta",
+            "Geometría"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Superficial",
+        "pistas": [
+            "Exterior",
+            "Apariencia",
+            "Corteza"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Estereotipia",
+        "pistas": [
+            "Comportamiento",
+            "Repetición",
+            "Patrón"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Intervención",
+        "pistas": [
+            "Acción",
+            "Cambio",
+            "Proceso"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Inconmensurabilidad",
+        "pistas": [
+            "Medición",
+            "Infinito",
+            "Imposible"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Exorcismo",
+        "pistas": [
+            "Ritual",
+            "Espíritus",
+            "Religión"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Fractal",
+        "pistas": [
+            "Geometría",
+            "Figura",
+            "Matemáticas"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Procrastinación",
+        "pistas": [
+            "Retraso",
+            "Tarea",
+            "Posponer"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Neurociencia",
+        "pistas": [
+            "Cerebro",
+            "Ciencia",
+            "Estudio"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Equinoccio",
+        "pistas": [
+            "Sol",
+            "Estación",
+            "Astronomía"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Ciclotimia",
+        "pistas": [
+            "Trastorno",
+            "Estado de ánimo",
+            "Psicología"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Antioxidante",
+        "pistas": [
+            "Salud",
+            "Protección",
+            "Comida"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Hidrosfera",
+        "pistas": [
+            "Agua",
+            "Tierra",
+            "Capa"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Subterfugio",
+        "pistas": [
+            "Truco",
+            "Engaño",
+            "Astucia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Embriología",
+        "pistas": [
+            "Desarrollo",
+            "Embriones",
+            "Biología"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Heterodoxo",
+        "pistas": [
+            "Opinión",
+            "No convencional",
+            "Pensamiento"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Paradoja",
+        "pistas": [
+            "Contradicción",
+            "Razonamiento",
+            "Increíble"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Fenotipo",
+        "pistas": [
+            "Genética",
+            "Apariencia",
+            "Características"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Onomatopeya",
+        "pistas": [
+            "Sonido",
+            "Palabra",
+            "Imitación"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Paleontología",
+        "pistas": [
+            "Fósiles",
+            "Prehistoria",
+            "Estudio"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Oxidación",
+        "pistas": [
+            "Reacción",
+            "Átomo",
+            "Química"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Autarquía",
+        "pistas": [
+            "Economía",
+            "Independencia",
+            "Autosuficiencia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Cibernética",
+        "pistas": [
+            "Computadoras",
+            "Ciencia",
+            "Automatización"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Nihilismo",
+        "pistas": [
+            "Filosofía",
+            "Negación",
+            "Existencia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Electromagnetismo",
+        "pistas": [
+            "Electricidad",
+            "Magnetismo",
+            "Física"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Hidrodinámica",
+        "pistas": [
+            "Agua",
+            "Fluidos",
+            "Física"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Metafísica",
+        "pistas": [
+            "Realidad",
+            "Filosofía",
+            "Existencia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Estereotipos",
+        "pistas": [
+            "Imágenes",
+            "Percepción",
+            "Cultura"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Hidrosfera",
+        "pistas": [
+            "Agua",
+            "Tierra",
+            "Capa"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Misántropo",
+        "pistas": [
+            "Persona",
+            "Desconfianza",
+            "Humanos"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Criptografía",
+        "pistas": [
+            "Código",
+            "Seguridad",
+            "Encriptación"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Revolución",
+        "pistas": [
+            "Cambio",
+            "Transformación",
+            "Historia"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Hipotálamo",
+        "pistas": [
+            "Cerebro",
+            "Glándula",
+            "Hormonas"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Sinestesia",
+        "pistas": [
+            "Sentidos",
+            "Percepción",
+            "Combinación"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Sociología",
+        "pistas": [
+            "Sociedad",
+            "Estudio",
+            "Humanos"
+        ],
+        "dificultad": "Difícil"
+    },
+    {
+        "palabra": "Diáfano",
+        "pistas": [
+            "Transparente",
+            "Claro",
+            "Luminoso"
+        ],
+        "dificultad": "Difícil"
+    } 
 ]
 

@@ -1,5 +1,4 @@
 import os, getpass
-from Juego import Juego
 from Jugador import Jugador
 
 class Consola:
@@ -57,7 +56,7 @@ class Consola:
             pistas = 1
         return jugadores, dificultad, pistas
         
-    def print_palabra(self, juego: Juego) -> None:
+    def print_palabra(self, juego) -> None:
         self.limpiar_consola()
         palabra = juego.palabra["palabra"].upper()
         for caracter in palabra:
@@ -74,7 +73,7 @@ class Consola:
             elif len(i) > 1 and i != palabra:
                 print(i, end=" ")
                 
-    def preguntar_letra(self, juego: Juego) -> None:
+    def preguntar_letra(self, juego) -> None:
         print("\n\n > ", end="")
         letra = str(input()).upper()
         if letra == juego.palabra["palabra"].upper():
@@ -98,7 +97,7 @@ class Consola:
     def print_ganador(self) -> None:
         print("\nHAS GANADO")
     
-    def print_perdedor(self, juego: Juego) -> None:
+    def print_perdedor(self, juego) -> None:
         print("\nHAS PERDIDO")
         print(juego.palabra["palabra"].upper(), sep= "")
 
@@ -109,10 +108,10 @@ class Consola:
         self.limpiar_consola()
         return getpass.getpass("Dime una palabra (se ve oculta) > ")
     
-    def preguntar_pistas(self) -> str:
+    def preguntar_pistas(self) -> list[str]:
         return [getpass.getpass("Dime una pista (se ve oculta) > ") for i in range(3)]
     
-    def print_pistas(self, errores: list[str], juego: Juego) -> None:
+    def print_pistas(self, errores: list[str], juego) -> None:
         if len(errores) >= 3 and juego.pistas == 1:
             print("\n",juego.palabra["pistas"][0], sep="")
         if len(errores) >= 5 and juego.pistas == 1:
@@ -123,3 +122,14 @@ class Consola:
     def print_jugador(self, jugador: Jugador) -> None:
         self.print_linea()
         print(jugador)
+
+    def preguntar_seguir_jugando(self) -> int:
+        print("¿Quieres seguir jugando?")
+        print("  1. Si")
+        print("  2. No")
+        return int(input(" > "))
+    
+    def print_error(self, e):
+        match type(e).__name__:
+            case __:
+                print("err: desconocido")
