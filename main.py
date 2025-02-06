@@ -14,20 +14,22 @@ try:
         # MENU SOCKETS MÁS ADELANTE
         if juego.jugadores == 2:
             jugador2 = Jugador(interfaz.preguntar_nombre())
-            juego.insertar_palabra(interfaz)
+            palabra = interfaz.preguntar_palabra()
+            pistas = interfaz.preguntar_pistas()
+            juego.insertar_palabra(palabra, pistas)
         else:
             juego.crear_palabra()
 
         errores = []
         ganador = False
         while len(errores) < 7 and not ganador:
-            interfaz.print_palabra(juego)
+            juego.letras_introducidas = interfaz.print_palabra(juego.palabra["palabra"].upper(), juego.letras_introducidas)
             interfaz.print_pistas(errores, juego)
             interfaz.print_ahorcado(errores)
             interfaz.preguntar_letra(juego)
             errores = juego.comprobar_errores()
             ganador = juego.comprobar_ganador()
-        interfaz.print_palabra(juego)
+        juego.letras_introducidas = interfaz.print_palabra(juego.palabra["palabra"].upper(), juego.letras_introducidas)
         interfaz.print_ahorcado(errores)
         if ganador:
             jugador1.sumar_punto()

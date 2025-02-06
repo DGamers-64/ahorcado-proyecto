@@ -14,7 +14,13 @@ class Consola:
         self.print_linea()
         print("| Bienvenido al ahorcado de Paula y Daniel |")
         self.print_linea()
-        input()
+        print(" Acción:")
+        print("  1. Jugar")
+        print("  2. Ranking")
+        print("  > ", end="")
+        resultado =int(input())
+        if resultado == 2:
+            self.print_ranking()
         self.limpiar_consola()
 
     def print_menu_jugadores(self) -> int:
@@ -56,22 +62,22 @@ class Consola:
             pistas = 1
         return jugadores, dificultad, pistas
         
-    def print_palabra(self, juego) -> None:
+    def print_palabra(self, palabra, letras_introducidas) -> None:
         self.limpiar_consola()
-        palabra = juego.palabra["palabra"].upper()
         for caracter in palabra:
-            if caracter in juego.letras_introducidas:
+            if caracter in letras_introducidas:
                 print (f"{caracter}", end=" ")
             elif caracter == " ":
                 print(" ", end=" ")
             else:
                 print("_", end=" ")
         print()
-        for i in juego.letras_introducidas:
+        for i in letras_introducidas:
             if i not in palabra:
                 print(i, end=" ")
             elif len(i) > 1 and i != palabra:
                 print(i, end=" ")
+        return letras_introducidas
                 
     def preguntar_letra(self, juego) -> None:
         print("\n\n > ", end="")
@@ -79,7 +85,7 @@ class Consola:
         if letra == juego.palabra["palabra"].upper():
             for caracter in letra:
                 juego.letras_introducidas.append(caracter)
-        elif letra not in juego.letras_introducidas:
+        elif letra not in juego.letras_introducidas:         
             juego.letras_introducidas.append(letra)
 
     def print_ahorcado(self, errores: list[str]) -> None:
@@ -131,8 +137,11 @@ class Consola:
     
     def print_error(self, e):
         match type(e).__name__:
-            case ValueError:
+            case "ValueError":
                 print("Err: ¡Valor incorrecto!")
+            case _:
+                print(f"Err: {e}")
 
     def print_keyboard_interrupt(self):
-        print("¡Hasta la próxima!")
+        print("\n¡Hasta la próxima!")
+        

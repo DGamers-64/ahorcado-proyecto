@@ -22,9 +22,7 @@ class Juego:
             if (self.palabra["dificultad"] == "Fácil" and self.dificultad == 1) or (self.palabra["dificultad"] == "Media" and self.dificultad == 2) or (self.palabra["dificultad"] == "Difícil" and self.dificultad == 3):
                 palabra_obtenida = True
 
-    def insertar_palabra(self, interfaz: Interfaz) -> None:
-        palabra = interfaz.preguntar_palabra()
-        pistas = interfaz.preguntar_pistas()
+    def insertar_palabra(self, palabra: str, pistas: list[str]) -> None:
         self.palabra = { "palabra": palabra, "pistas": pistas }
     
     def comprobar_errores(self) -> list[str]:
