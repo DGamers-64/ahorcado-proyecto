@@ -44,7 +44,7 @@ try:
                 jugador2.sumar_punto()
                 interfaz.print_jugador(jugador2)
         respuesta = interfaz.preguntar_seguir_jugando()
-except KeyboardInterrupt as e:
-    interfaz.print_error("keyboard")
+except KeyboardInterrupt:
+    interfaz.print_keyboard_interrupt()
 except Exception as e:
     interfaz.print_error(e)

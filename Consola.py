@@ -131,5 +131,8 @@ class Consola:
     
     def print_error(self, e):
         match type(e).__name__:
-            case __:
-                print("err: desconocido")
+            case ValueError:
+                print("Err: ¡Valor incorrecto!")
+
+    def print_keyboard_interrupt(self):
+        print("¡Hasta la próxima!")
