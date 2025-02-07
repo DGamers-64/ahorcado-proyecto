@@ -1,7 +1,7 @@
 import os, getpass
 from Jugador import Jugador
 
-class Consola:
+class Vista:
     
     def print_linea(self) -> None:
         print("--------------------------------------------")
@@ -22,6 +22,9 @@ class Consola:
         if resultado == 2:
             self.print_ranking()
         self.limpiar_consola()
+
+    def print_ranking(self):
+        pass
 
     def print_menu_jugadores(self) -> int:
         self.print_linea()
@@ -83,7 +86,6 @@ class Consola:
                 print(i, end=" ")
             elif len(i) > 1 and i != palabra:
                 print(i, end=" ")
-        return letras_introducidas
                 
     def preguntar_letra(self, juego) -> None:
         print("\n\n > ", end="")

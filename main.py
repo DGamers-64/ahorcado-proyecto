@@ -1,8 +1,10 @@
 from Jugador import Jugador
 from Juego import Juego
-from Consola import Consola as Interfaz
+from Vista import Vista as Interfaz
+from Modelo import Modelo
 
 interfaz = Interfaz()
+modelo = Modelo()
 
 try:
     respuesta = 1
@@ -23,13 +25,13 @@ try:
         errores = []
         ganador = False
         while len(errores) < 7 and not ganador:
-            juego.letras_introducidas = interfaz.print_palabra(juego.palabra["palabra"].upper(), juego.letras_introducidas)
+            interfaz.print_palabra(juego.palabra["palabra"].upper(), juego.letras_introducidas)
             interfaz.print_pistas(errores, juego)
             interfaz.print_ahorcado(errores)
             interfaz.preguntar_letra(juego)
             errores = juego.comprobar_errores()
             ganador = juego.comprobar_ganador()
-        juego.letras_introducidas = interfaz.print_palabra(juego.palabra["palabra"].upper(), juego.letras_introducidas)
+        interfaz.print_palabra(juego.palabra["palabra"].upper(), juego.letras_introducidas)
         interfaz.print_ahorcado(errores)
         if ganador:
             jugador1.sumar_punto()

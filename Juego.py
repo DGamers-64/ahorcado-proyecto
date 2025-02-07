@@ -1,5 +1,4 @@
 import json, random
-from Consola import Consola as Interfaz
 
 class Juego: 
 

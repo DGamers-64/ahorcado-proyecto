@@ -1,12 +1,12 @@
 import json
+from Modelo import Modelo 
 
 class Jugador:
     nombre: str
     puntuacion: int
 
-    def __init__(self, nombre: str) -> None:
-        with open('jugador.json', 'r', encoding='utf-8') as f:
-            jugadores = json.load(f)
+    def __init__(self, nombre: str, ) -> None:
+        jugadores = modelo.get_jugadores()
         if nombre not in jugadores:
             jugadores[nombre] = 0
         self.nombre = nombre
