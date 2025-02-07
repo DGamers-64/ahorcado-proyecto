@@ -12,7 +12,7 @@ class Consola:
     def print_menu_bienvenida(self) -> None:
         self.limpiar_consola()
         self.print_linea()
-        print("| Bienvenido al ahorcado de Paula y Daniel |")
+        print("Bienvenido al ahorcado de Paula y Daniel")
         self.print_linea()
         print(" Acción:")
         print("  1. Jugar")
@@ -24,29 +24,35 @@ class Consola:
         self.limpiar_consola()
 
     def print_menu_jugadores(self) -> int:
-        print(" Jugadores:")
-        print("  1. Un jugador")
-        print("  2. Dos jugadores")
-        print("  > ", end="")
+        self.print_linea()
+        print("Jugadores:")
+        self.print_linea()
+        print(" 1. Un jugador")
+        print(" 2. Dos jugadores")
+        print(" > ", end="")
         jugadores = int(input())
         self.limpiar_consola()
         return jugadores
 
     def print_menu_dificultad(self) -> int:
-        print(" Dificultad:")
-        print("  1. Fácil")
-        print("  2. Medio")
-        print("  3. Dificil")
-        print("  > ", end="")
+        self.print_linea()
+        print("Dificultad:")
+        self.print_linea()
+        print(" 1. Fácil")
+        print(" 2. Medio")
+        print(" 3. Dificil")
+        print(" > ", end="")
         dificultad = int(input())
         self.limpiar_consola()
         return dificultad
     
     def print_menu_pistas(self) -> int:
-        print(" Pistas:")
-        print("  1. Con pistas")
-        print("  2. Sin pistas")
-        print("  > ", end="")
+        self.print_linea()
+        print("Pistas:")
+        self.print_linea()
+        print(" 1. Con pistas")
+        print(" 2. Sin pistas")
+        print(" > ", end="")
         pistas = int(input())
         self.limpiar_consola()
         return pistas

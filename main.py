@@ -11,7 +11,7 @@ try:
         juego.jugadores, juego.dificultad, juego.pistas = interfaz.print_menu_inicial()
         jugador1 = Jugador(interfaz.preguntar_nombre())
         
-        # MENU SOCKETS MÁS ADELANTE
+        # MENU SOCKETS MÁS ADELANTE 
         if juego.jugadores == 2:
             jugador2 = Jugador(interfaz.preguntar_nombre())
             palabra = interfaz.preguntar_palabra()
