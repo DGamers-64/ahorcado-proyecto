@@ -5,8 +5,8 @@ class Jugador:
     nombre: str
     puntuacion: int
 
-    def __init__(self, nombre: str, ) -> None:
-        jugadores = modelo.get_jugadores()
+    def __init__(self, nombre: str) -> None:
+        jugadores = Modelo.get_jugadores()
         if nombre not in jugadores:
             jugadores[nombre] = 0
         self.nombre = nombre

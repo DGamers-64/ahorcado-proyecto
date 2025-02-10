@@ -1,5 +1,5 @@
 import os, getpass
-from Jugador import Jugador
+from Modelo import Modelo
 
 class Vista:
     
@@ -9,7 +9,22 @@ class Vista:
     def limpiar_consola(self) -> None:
         os.system("cls")
 
-    def print_menu_bienvenida(self) -> None:
+    def input_vista(self, max_opciones: int) -> int:
+        completado = False
+        while not completado:
+            try:
+                self.print_linea()
+                respuesta = int(input(" > "))
+                self.print_linea()
+                if respuesta < 1 or respuesta > max_opciones:
+                    print("Err: Valor incorrecto")
+                    continue
+                completado = True
+            except ValueError:
+                print("Err: Valor incorrecto")
+        return respuesta
+
+    def print_menu_bienvenida(self) -> int:
         self.limpiar_consola()
         self.print_linea()
         print("Bienvenido al ahorcado de Paula y Daniel")
@@ -17,14 +32,25 @@ class Vista:
         print(" Acción:")
         print("  1. Jugar")
         print("  2. Ranking")
-        print("  > ", end="")
-        resultado =int(input())
-        if resultado == 2:
-            self.print_ranking()
+        resultado = self.input_vista(2)
         self.limpiar_consola()
+        return resultado
 
-    def print_ranking(self):
-        pass
+    def print_ranking(self, jugadores: dict):
+        self.limpiar_consola()
+        self.print_linea()
+        print("RANKING JUGADORES")
+        self.print_linea()
+        jugadores = dict(sorted(jugadores.items(), key=lambda x: x[1], reverse=True))
+        contador = 1
+        for key, valor in jugadores.items():
+            print(f"{contador}. {key} {valor}")
+            contador += 1
+            if contador > 10:
+                break
+        self.print_linea()
+        input()
+        self.limpiar_consola()
 
     def print_menu_jugadores(self) -> int:
         self.print_linea()
@@ -32,8 +58,7 @@ class Vista:
         self.print_linea()
         print(" 1. Un jugador")
         print(" 2. Dos jugadores")
-        print(" > ", end="")
-        jugadores = int(input())
+        jugadores = self.input_vista(2)
         self.limpiar_consola()
         return jugadores
 
@@ -44,8 +69,7 @@ class Vista:
         print(" 1. Fácil")
         print(" 2. Medio")
         print(" 3. Dificil")
-        print(" > ", end="")
-        dificultad = int(input())
+        dificultad = self.input_vista(3)
         self.limpiar_consola()
         return dificultad
     
@@ -55,21 +79,9 @@ class Vista:
         self.print_linea()
         print(" 1. Con pistas")
         print(" 2. Sin pistas")
-        print(" > ", end="")
-        pistas = int(input())
+        pistas = self.input_vista(2)
         self.limpiar_consola()
         return pistas
-
-    def print_menu_inicial(self) -> tuple[int, int, int]:
-        self.print_menu_bienvenida()
-        jugadores = self.print_menu_jugadores()
-        if jugadores == 1:
-            dificultad = self.print_menu_dificultad()
-            pistas = self.print_menu_pistas()
-        else:
-            dificultad = 1
-            pistas = 1
-        return jugadores, dificultad, pistas
         
     def print_palabra(self, palabra, letras_introducidas) -> None:
         self.limpiar_consola()
@@ -90,7 +102,7 @@ class Vista:
     def preguntar_letra(self, juego) -> None:
         print("\n\n > ", end="")
         letra = str(input()).upper()
-        if letra == juego.palabra["palabra"].upper():
+        if letra == juego.palabra:
             for caracter in letra:
                 juego.letras_introducidas.append(caracter)
         elif letra not in juego.letras_introducidas:         
@@ -115,8 +127,13 @@ class Vista:
         print("\nHAS PERDIDO")
         print(juego.palabra["palabra"].upper(), sep= "")
 
-    def preguntar_nombre(self) -> str:
-        return input("Nombre Jugador > ")
+    def preguntar_nombre(self, modo: str) -> str:
+        match modo:
+            case "adivinador":
+                respuesta = input("Nombre Adivinador > ")
+            case "preguntador":
+                respuesta = input("Nombre Preguntador > ")
+        return respuesta
     
     def preguntar_palabra(self) -> str:
         self.limpiar_consola()
@@ -125,15 +142,15 @@ class Vista:
     def preguntar_pistas(self) -> list[str]:
         return [getpass.getpass("Dime una pista (se ve oculta) > ") for i in range(3)]
     
-    def print_pistas(self, errores: list[str], juego) -> None:
-        if len(errores) >= 3 and juego.pistas == 1:
-            print("\n",juego.palabra["pistas"][0], sep="")
-        if len(errores) >= 5 and juego.pistas == 1:
-            print("\n",juego.palabra["pistas"][1], sep="")
-        if len(errores) >= 6 and juego.pistas == 1:
-            print("\n",juego.palabra["pistas"][2], sep="")
+    def print_pistas(self, errores: list[str], pistas: list) -> None:
+        if len(errores) >= 3 and pistas == 1:
+            print("\n",pistas[0], sep="")
+        if len(errores) >= 5 and pistas == 1:
+            print("\n",pistas[1], sep="")
+        if len(errores) >= 6 and pistas == 1:
+            print("\n",pistas[2], sep="")
 
-    def print_jugador(self, jugador: Jugador) -> None:
+    def print_jugador(self, jugador) -> None:
         self.print_linea()
         print(jugador)
 
@@ -141,7 +158,7 @@ class Vista:
         print("¿Quieres seguir jugando?")
         print("  1. Si")
         print("  2. No")
-        return int(input(" > "))
+        return self.input_vista(2)
     
     def print_error(self, e):
         match type(e).__name__:
