@@ -15,18 +15,22 @@ class Jugador:
     def __str__(self) -> str:
         return f"Usuario: {self.nombre} \nPuntuacion: {self.puntuacion}"
 
-    def sumar_punto(self) -> None:
-        self.puntuacion += 1
-        with open('jugador.json', 'r', encoding='utf-8') as f:
-            jugadores = json.load(f)
-        jugadores[self.nombre] = self.puntuacion
-        with open('jugador.json', 'w', encoding='utf-8') as f:
-            f.write(json.dumps(jugadores, indent=4))
+    def sumar_puntos(self, jugadores, dificultad, pistas) -> None:
+        if jugadores != 2:
+            puntuacion_partida = 1
+            puntuacion_partida *= dificultad
+            puntuacion_partida *= pistas
+        else:
+            puntuacion_partida = 10
+        self.puntuacion += puntuacion_partida
+        Modelo.actualizar_jugador(self.nombre, self.puntuacion)
 
-    def restar_punto(self) -> None:
-        self.puntuacion -= 1
-        with open('jugador.json', 'r', encoding='utf-8') as f:
-            jugadores = json.load(f)
-        jugadores[self.nombre] = self.puntuacion
-        with open('jugador.json', 'w', encoding='utf-8') as f:
-            f.write(json.dumps(jugadores, indent=4))
+    def restar_puntos(self, jugadores, dificultad, pistas) -> None:
+        if jugadores != 2:
+            puntuacion_partida = 1
+            puntuacion_partida *= dificultad
+            puntuacion_partida *= pistas
+        else:
+            puntuacion_partida = 10
+        self.puntuacion -= puntuacion_partida
+        Modelo.actualizar_jugador(self.nombre, self.puntuacion)

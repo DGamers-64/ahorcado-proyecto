@@ -32,7 +32,8 @@ class Vista:
         print(" Acción:")
         print("  1. Jugar")
         print("  2. Ranking")
-        resultado = self.input_vista(2)
+        print("  3. Reglas del juego")
+        resultado = self.input_vista(3)
         self.limpiar_consola()
         return resultado
 
@@ -99,14 +100,15 @@ class Vista:
             elif len(i) > 1 and i != palabra:
                 print(i, end=" ")
                 
-    def preguntar_letra(self, juego) -> None:
+    def preguntar_letra(self, palabra, letras_introducidas) -> None:
         print("\n\n > ", end="")
         letra = str(input()).upper()
-        if letra == juego.palabra:
+        if letra == palabra:
             for caracter in letra:
-                juego.letras_introducidas.append(caracter)
-        elif letra not in juego.letras_introducidas:         
-            juego.letras_introducidas.append(letra)
+                letras_introducidas.append(caracter)
+        elif letra not in letras_introducidas:         
+            letras_introducidas.append(letra)
+        return letras_introducidas
 
     def print_ahorcado(self, errores: list[str]) -> None:
         estados = [
@@ -123,9 +125,9 @@ class Vista:
     def print_ganador(self) -> None:
         print("\nHAS GANADO")
     
-    def print_perdedor(self, juego) -> None:
+    def print_perdedor(self, palabra) -> None:
         print("\nHAS PERDIDO")
-        print(juego.palabra["palabra"].upper(), sep= "")
+        print(palabra, sep= "")
 
     def preguntar_nombre(self, modo: str) -> str:
         match modo:
@@ -137,7 +139,7 @@ class Vista:
     
     def preguntar_palabra(self) -> str:
         self.limpiar_consola()
-        return getpass.getpass("Dime una palabra (se ve oculta) > ")
+        return getpass.getpass("Dime una palabra (se ve oculta) > ").upper()
     
     def preguntar_pistas(self) -> list[str]:
         return [getpass.getpass("Dime una pista (se ve oculta) > ") for i in range(3)]
@@ -150,23 +152,31 @@ class Vista:
         if len(errores) >= 6 and pistas == 1:
             print("\n",pistas[2], sep="")
 
-    def print_jugador(self, jugador) -> None:
-        self.print_linea()
-        print(jugador)
-
     def preguntar_seguir_jugando(self) -> int:
         print("¿Quieres seguir jugando?")
         print("  1. Si")
         print("  2. No")
         return self.input_vista(2)
     
-    def print_error(self, e):
+    def print_error(self, e: str) -> None:
         match type(e).__name__:
             case "ValueError":
                 print("Err: ¡Valor incorrecto!")
             case _:
                 print(f"Err: {e}")
 
-    def print_keyboard_interrupt(self):
+    def print_keyboard_interrupt(self) -> None:
         print("\n¡Hasta la próxima!")
         
+    def print_reglas(self) -> None:
+        self.print_linea()
+        print("Reglas:")
+        self.print_linea()
+        print(" Hay 2 modos principales, 1 o 2 jugadores")
+        print(" En un jugador elegirás la dificultad, y si usar o no pistas.")
+        print(" Dependiendo de estas opciones tendrás más o menos puntuación.")
+        print(" En 2 jugadores uno elige una palabra y el otro la debe de")
+        print(" adivinar. El que pierda le dará 10 puntos al otro.")
+        self.print_linea()
+        input()
+        self.limpiar_consola()

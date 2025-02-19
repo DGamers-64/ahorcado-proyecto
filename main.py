@@ -16,22 +16,30 @@ try:
             if resultado == 2:
                 jugadores = Modelo.get_jugadores()
                 interfaz.print_ranking(jugadores)
+            elif resultado == 3:
+                interfaz.print_reglas()
         juego.jugadores = interfaz.print_menu_jugadores()
+
+        # Aquí establecemos el juego dependiendo de la cantidad de jugadores
+
         if juego.jugadores != 2:
             juego.dificultad = interfaz.print_menu_dificultad()
             juego.pistas = interfaz.print_menu_pistas()
             nombre = interfaz.preguntar_nombre("adivinador")
             jugador1 = Jugador(nombre)
             juego.crear_palabra()
-
-        if juego.jugadores == 2:
-            nombre = interfaz.preguntar_nombre("preguntador")
-            jugador1 = Jugador(nombre)
+        elif juego.jugadores == 2:
+            juego.dificultad = 1
+            juego.pistas = 1
             nombre = interfaz.preguntar_nombre("adivinador")
+            jugador1 = Jugador(nombre)
+            nombre = interfaz.preguntar_nombre("preguntador")
             jugador2 = Jugador(nombre)
             palabra = interfaz.preguntar_palabra()
             pistas = interfaz.preguntar_pistas()
             juego.insertar_palabra(palabra, pistas)
+
+        # Bucle principal
 
         errores = []
         ganador = False
@@ -39,25 +47,28 @@ try:
             interfaz.print_palabra(juego.palabra, juego.letras_introducidas)
             interfaz.print_pistas(errores, juego.palabra_info["pistas"])
             interfaz.print_ahorcado(errores)
-            interfaz.preguntar_letra(juego)
+            juego.letras_introducidas = interfaz.preguntar_letra(juego.palabra, juego.letras_introducidas)
             errores = juego.comprobar_errores()
             ganador = juego.comprobar_ganador()
+
+        # Resultados partida
+
         interfaz.print_palabra(juego.palabra, juego.letras_introducidas)
         interfaz.print_ahorcado(errores)
         if ganador:
-            jugador1.sumar_punto()
+            jugador1.sumar_puntos(juego.jugadores, juego.dificultad, juego.pistas)
             interfaz.print_ganador()
-            interfaz.print_jugador(jugador1)
+            print(jugador1)
             if juego.jugadores == 2:
-                jugador2.restar_punto()
-                interfaz.print_jugador(jugador2)
+                jugador2.restar_puntos(juego.jugadores, juego.dificultad, juego.pistas)
+                print(jugador2)
         else:
-            jugador1.restar_punto()
-            interfaz.print_perdedor(juego)
-            interfaz.print_jugador(jugador1)
+            jugador1.restar_puntos(juego.jugadores, juego.dificultad, juego.pistas)
+            interfaz.print_perdedor(juego.palabra)
+            print(jugador1)
             if juego.jugadores == 2:
-                jugador2.sumar_punto()
-                interfaz.print_jugador(jugador2)
+                jugador2.sumar_puntos(juego.jugadores, juego.dificultad, juego.pistas)
+                print(jugador2)
         respuesta = interfaz.preguntar_seguir_jugando()
 except KeyboardInterrupt:
     interfaz.print_keyboard_interrupt()

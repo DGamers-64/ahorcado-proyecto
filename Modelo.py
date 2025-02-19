@@ -9,7 +9,8 @@ class Modelo:
         return jugadores
     
     @staticmethod
-    def add_jugador_nuevo(jugadores: dict, jugador: list) -> None:
-        jugadores[jugador[0]] = jugador[1]
+    def actualizar_jugador(nombre: str, puntuacion: int) -> None:
+        jugadores = Modelo.get_jugadores()
+        jugadores[nombre] = puntuacion
         with open('jugador.json', 'w', encoding='utf-8') as f:
             f.write(json.dumps(jugadores, indent=4))
