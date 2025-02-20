@@ -45,7 +45,8 @@ try:
         ganador = False
         while len(errores) < 7 and not ganador:
             interfaz.print_palabra(juego.palabra, juego.letras_introducidas)
-            interfaz.print_pistas(errores, juego.palabra_info["pistas"])
+            if juego.pistas == 1:
+                interfaz.print_pistas(errores, juego.palabra_info["pistas"])
             interfaz.print_ahorcado(errores)
             juego.letras_introducidas = interfaz.preguntar_letra(juego.palabra, juego.letras_introducidas)
             errores = juego.comprobar_errores()

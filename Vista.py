@@ -7,7 +7,10 @@ class Vista:
         print("--------------------------------------------")
     
     def limpiar_consola(self) -> None:
-        os.system("cls")
+        if os.name == "nt":
+            os.system("cls")
+        elif os.name == "posix":
+            os.system("clear")
 
     def input_vista(self, max_opciones: int) -> int:
         completado = False
@@ -145,11 +148,11 @@ class Vista:
         return [getpass.getpass("Dime una pista (se ve oculta) > ") for i in range(3)]
     
     def print_pistas(self, errores: list[str], pistas: list) -> None:
-        if len(errores) >= 3 and pistas == 1:
+        if len(errores) >= 3:
             print("\n",pistas[0], sep="")
-        if len(errores) >= 5 and pistas == 1:
+        if len(errores) >= 5:
             print("\n",pistas[1], sep="")
-        if len(errores) >= 6 and pistas == 1:
+        if len(errores) >= 6:
             print("\n",pistas[2], sep="")
 
     def preguntar_seguir_jugando(self) -> int:
