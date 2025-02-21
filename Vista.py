@@ -87,7 +87,7 @@ class Vista:
         self.limpiar_consola()
         return pistas
         
-    def print_palabra(self, palabra, letras_introducidas) -> None:
+    def print_palabra(self, palabra: str, letras_introducidas: list) -> None:
         self.limpiar_consola()
         for caracter in palabra:
             if caracter in letras_introducidas:
@@ -103,7 +103,7 @@ class Vista:
             elif len(i) > 1 and i != palabra:
                 print(i, end=" ")
                 
-    def preguntar_letra(self, palabra, letras_introducidas) -> None:
+    def preguntar_letra(self, palabra: str, letras_introducidas: list) -> list:
         print("\n\n > ", end="")
         letra = str(input()).upper()
         if letra == palabra:
